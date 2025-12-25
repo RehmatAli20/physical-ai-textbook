@@ -7,7 +7,6 @@ const config = {
   tagline: 'A Textbook on Embodied Intelligence and Physical AI',
   favicon: 'img/favicon.ico',
 
-  // ✅ REQUIRED FOR DEPLOY (Vercel / Netlify)
   url: 'https://physical-ai-textbook.vercel.app',
   baseUrl: '/',
 
@@ -20,6 +19,11 @@ const config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+  },
+
+  // ✅ HERE IS THE FIX
+  customFields: {
+    backendUrl: 'https://ali2523-physical-ai-textbook-spec-kit.hf.space',
   },
 
   stylesheets: [
@@ -35,7 +39,7 @@ const config = {
       {
         docs: {
           sidebarPath: './sidebars.js',
-          routeBasePath: '/', // 👈 Docs = Homepage
+          routeBasePath: '/',
         },
         blog: false,
         theme: {
