@@ -14,7 +14,8 @@ export default function ChatWidget() {
   const scrollRef = useRef(null);
 
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
 
   // Auto-scroll to bottom whenever messages or loading changes
   useEffect(() => {
