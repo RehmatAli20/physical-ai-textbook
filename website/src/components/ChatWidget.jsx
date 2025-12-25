@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
  * Pro-Level ChatWidget with Chat History
  * Logic: Same as original, added 'messages' state for history.
  */
+
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [question, setQuestion] = useState("");
@@ -13,6 +14,7 @@ export default function ChatWidget() {
   const scrollRef = useRef(null);
 
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
   // Auto-scroll to bottom whenever messages or loading changes
   useEffect(() => {
