@@ -1,0 +1,23 @@
+{
+  "id": "capstone/system-workflow",
+  "title": "System Workflow",
+  "description": "This chapter explains how all components of the Physical AI system work together",
+  "source": "@site/docs/capstone/system-workflow.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/system-workflow",
+  "permalink": "/capstone/system-workflow",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Capstone Project Overview",
+    "permalink": "/capstone/project-overview"
+  },
+  "next": {
+    "title": "Expected Learning Outcomes",
+    "permalink": "/capstone/expected-outcomes"
+  }
+}

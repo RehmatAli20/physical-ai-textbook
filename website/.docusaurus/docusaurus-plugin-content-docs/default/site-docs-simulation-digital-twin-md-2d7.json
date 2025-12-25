@@ -1,0 +1,23 @@
+{
+  "id": "simulation/digital-twin",
+  "title": "Digital Twin Concept",
+  "description": "A digital twin is a virtual replica of a physical system. In robotics, a digital",
+  "source": "@site/docs/simulation/digital-twin.md",
+  "sourceDirName": "simulation",
+  "slug": "/simulation/digital-twin",
+  "permalink": "/simulation/digital-twin",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Introduction to URDF",
+    "permalink": "/ros2/urdf-introduction"
+  },
+  "next": {
+    "title": "Gazebo Simulation Environment",
+    "permalink": "/simulation/gazebo"
+  }
+}

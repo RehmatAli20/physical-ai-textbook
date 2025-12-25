@@ -1,0 +1,23 @@
+{
+  "id": "intro/learning-outcomes",
+  "title": "Learning Outcomes",
+  "description": "After completing this course, students will gain a clear understanding of how",
+  "source": "@site/docs/intro/learning-outcomes.md",
+  "sourceDirName": "intro",
+  "slug": "/intro/learning-outcomes",
+  "permalink": "/intro/learning-outcomes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Course Overview",
+    "permalink": "/intro/overview"
+  },
+  "next": {
+    "title": "What is Physical AI?",
+    "permalink": "/physical-ai/what-is-physical-ai"
+  }
+}

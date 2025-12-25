@@ -1,0 +1,17 @@
+{
+  "id": "index",
+  "title": "Physical AI & Humanoid Robotics",
+  "description": "A Complete Textbook on Embodied Intelligence, Robotics, and AI in the Physical World",
+  "source": "@site/docs/index.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Physical AI & Humanoid Robotics",
+    "hide_table_of_contents": true
+  }
+}

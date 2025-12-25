@@ -1,0 +1,23 @@
+{
+  "id": "vla/vision-language-action",
+  "title": "Vision–Language–Action (VLA)",
+  "description": "Vision–Language–Action (VLA) systems represent a major shift in how robots interact",
+  "source": "@site/docs/vla/vision-language-action.md",
+  "sourceDirName": "vla",
+  "slug": "/vla/vision-language-action",
+  "permalink": "/vla/vision-language-action",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Sim-to-Real Transfer",
+    "permalink": "/nvidia-isaac/sim-to-real"
+  },
+  "next": {
+    "title": "Voice to Action",
+    "permalink": "/vla/voice-to-action"
+  }
+}

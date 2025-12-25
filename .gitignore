@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+.env.*
+
+# Node / Docusaurus
+node_modules/
+build/
+.cache/
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Gemini / secrets (safe)
+.gemini/.env

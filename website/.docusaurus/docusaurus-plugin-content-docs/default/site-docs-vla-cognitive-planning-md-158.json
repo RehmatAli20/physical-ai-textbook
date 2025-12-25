@@ -1,0 +1,23 @@
+{
+  "id": "vla/cognitive-planning",
+  "title": "cognitive-planning",
+  "description": "---",
+  "source": "@site/docs/vla/cognitive-planning.md",
+  "sourceDirName": "vla",
+  "slug": "/vla/cognitive-planning",
+  "permalink": "/vla/cognitive-planning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Voice to Action",
+    "permalink": "/vla/voice-to-action"
+  },
+  "next": {
+    "title": "Capstone Project Overview",
+    "permalink": "/capstone/project-overview"
+  }
+}

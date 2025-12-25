@@ -1,0 +1,23 @@
+{
+  "id": "ros2/nodes-topics-services",
+  "title": "Nodes, Topics, and Services",
+  "description": "ROS 2 systems are built using small, independent programs called nodes. Each node",
+  "source": "@site/docs/ros2/nodes-topics-services.md",
+  "sourceDirName": "ros2",
+  "slug": "/ros2/nodes-topics-services",
+  "permalink": "/ros2/nodes-topics-services",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "ROS 2 Overview",
+    "permalink": "/ros2/ros2-overview"
+  },
+  "next": {
+    "title": "Introduction to URDF",
+    "permalink": "/ros2/urdf-introduction"
+  }
+}

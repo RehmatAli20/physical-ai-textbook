@@ -1,0 +1,19 @@
+{
+  "id": "intro/overview",
+  "title": "Course Overview",
+  "description": "This textbook introduces the fundamentals of Physical AI and Humanoid Robotics.",
+  "source": "@site/docs/intro/overview.md",
+  "sourceDirName": "intro",
+  "slug": "/intro/overview",
+  "permalink": "/intro/overview",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "next": {
+    "title": "Learning Outcomes",
+    "permalink": "/intro/learning-outcomes"
+  }
+}

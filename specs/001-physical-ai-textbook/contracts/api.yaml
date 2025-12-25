@@ -1,0 +1,361 @@
+openapi: 3.0.0
+info:
+  title: Physical AI Textbook API
+  version: 1.0.0
+  description: API for accessing and interacting with the Physical AI Textbook content.
+
+servers:
+  - url: /api/v1
+    description: Base API URL
+
+tags:
+  - name: Chapters
+    description: Textbook chapters and their content
+  - name: Concepts
+    description: Core AI/Humanoid Robotics concepts
+  - name: Case Studies
+    description: Practical application examples
+  - name: Interactive Elements
+    description: Code examples, simulations, quizzes
+  - name: Students
+    description: Student profiles and progress tracking
+
+paths:
+  /chapters:
+    get:
+      tags:
+        - Chapters
+      summary: Retrieve a list of all chapters
+      operationId: getAllChapters
+      parameters:
+        - name: limit
+          in: query
+          description: Maximum number of chapters to return
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: offset
+          in: query
+          description: Number of chapters to skip before starting to collect the result set
+          required: false
+          schema:
+            type: integer
+            default: 0
+      responses:
+        '200':
+          description: A list of chapters
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ChapterSummary'
+    
+  /chapters/{chapterId}:
+    get:
+      tags:
+        - Chapters
+      summary: Retrieve a specific chapter by ID
+      operationId: getChapterById
+      parameters:
+        - name: chapterId
+          in: path
+          description: ID of the chapter to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of a specific chapter
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chapter'
+        '404':
+          description: Chapter not found
+
+  /concepts:
+    get:
+      tags:
+        - Concepts
+      summary: Retrieve a list of all concepts
+      operationId: getAllConcepts
+      responses:
+        '200':
+          description: A list of concepts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Concept'
+
+  /case-studies:
+    get:
+      tags:
+        - Case Studies
+      summary: Retrieve a list of all case studies
+      operationId: getAllCaseStudies
+      responses:
+        '200':
+          description: A list of case studies
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CaseStudySummary'
+
+  /case-studies/{caseStudyId}:
+    get:
+      tags:
+        - Case Studies
+      summary: Retrieve a specific case study by ID
+      operationId: getCaseStudyById
+      parameters:
+        - name: caseStudyId
+          in: path
+          description: ID of the case study to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of a specific case study
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaseStudy'
+        '404':
+          description: Case study not found
+
+  /interactive-elements/{elementId}/engage:
+    post:
+      tags:
+        - Interactive Elements
+      summary: Engage with an interactive element (e.g., submit quiz answers, run simulation)
+      operationId: engageInteractiveElement
+      parameters:
+        - name: elementId
+          in: path
+          description: ID of the interactive element
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Input data for engaging with the interactive element
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object # Flexible schema to accommodate different element types
+      responses:
+        '200':
+          description: Result of the interaction
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: Invalid input
+        '404':
+          description: Interactive element not found
+
+  /students/{studentId}/progress:
+    get:
+      tags:
+        - Students
+      summary: Retrieve a student's progress
+      operationId: getStudentProgress
+      parameters:
+        - name: studentId
+          in: path
+          description: ID of the student
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Student progress details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudentProgress'
+        '404':
+          description: Student not found
+    put:
+      tags:
+        - Students
+      summary: Update a student's progress
+      operationId: updateStudentProgress
+      parameters:
+        - name: studentId
+          in: path
+          description: ID of the student
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Updated student progress
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StudentProgressUpdate'
+      responses:
+        '200':
+          description: Progress updated successfully
+        '400':
+          description: Invalid input
+        '404':
+          description: Student not found
+
+components:
+  schemas:
+    ChapterSummary:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the chapter
+        title:
+          type: string
+          description: Title of the chapter
+        slug:
+          type: string
+          description: URL-friendly identifier for the chapter
+        order:
+          type: integer
+          description: Position of the chapter in the textbook flow
+    
+    Chapter:
+      type: object
+      allOf:
+        - $ref: '#/components/schemas/ChapterSummary'
+        - type: object
+          properties:
+            content:
+              type: string
+              description: Full content of the chapter (Markdown/MDX)
+            conceptsCovered:
+              type: array
+              items:
+                type: string
+              description: IDs of concepts covered in this chapter
+            caseStudiesReferenced:
+              type: array
+              items:
+                type: string
+              description: IDs of case studies referenced in this chapter
+            interactiveElementsIncluded:
+              type: array
+              items:
+                type: string
+              description: IDs of interactive elements in this chapter
+            prerequisites:
+              type: array
+              items:
+                type: string
+              description: IDs of prerequisite chapters or concepts
+            lastUpdated:
+              type: string
+              format: date-time
+              description: Timestamp of the last update
+    
+    Concept:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the concept
+        name:
+          type: string
+          description: Name of the concept
+        description:
+          type: string
+          description: Short summary of the concept
+        relatedChapters:
+          type: array
+          items:
+            type: string
+          description: IDs of chapters where this concept is discussed
+        relatedCaseStudies:
+          type: array
+          items:
+            type: string
+          description: IDs of case studies where this concept is applied
+        keywords:
+          type: array
+          items:
+            type: string
+          description: Relevant keywords for the concept
+    
+    CaseStudySummary:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the case study
+        title:
+          type: string
+          description: Title of the case study
+        difficulty:
+          type: string
+          enum: [Beginner, Intermediate, Advanced]
+          description: Difficulty level of the case study
+    
+    CaseStudy:
+      type: object
+      allOf:
+        - $ref: '#/components/schemas/CaseStudySummary'
+        - type: object
+          properties:
+            description:
+              type: string
+              description: Full description of the case study (Markdown/MDX)
+            conceptsApplied:
+              type: array
+              items:
+                type: string
+              description: IDs of concepts applied in this case study
+            interactiveElementsIncluded:
+              type: array
+              items:
+                type: string
+              description: IDs of interactive elements related to this case study
+    
+    StudentProgress:
+      type: object
+      properties:
+        studentId:
+          type: string
+          description: ID of the student
+        chapterProgress:
+          type: object
+          additionalProperties:
+            type: string
+            enum: [completed, in_progress, not_started]
+          description: Map of chapter IDs to their status for the student
+        quizScores:
+          type: object
+          additionalProperties:
+            type: integer
+          description: Map of interactive element IDs (quizzes) to their scores
+    
+    StudentProgressUpdate:
+      type: object
+      properties:
+        chapterId:
+          type: string
+          description: ID of the chapter to update progress for
+        status:
+          type: string
+          enum: [completed, in_progress, not_started]
+          description: New status for the chapter
+        interactiveElementId:
+          type: string
+          description: Optional ID of an interactive element (e.g., quiz) to update score for
+        score:
+          type: integer
+          description: Optional score for the interactive element

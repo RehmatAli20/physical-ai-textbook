@@ -1,0 +1,23 @@
+{
+  "id": "physical-ai/embodied-intelligence",
+  "title": "Embodied Intelligence",
+  "description": "Embodied intelligence is the idea that intelligence does not exist only in the brain",
+  "source": "@site/docs/physical-ai/embodied-intelligence.md",
+  "sourceDirName": "physical-ai",
+  "slug": "/physical-ai/embodied-intelligence",
+  "permalink": "/physical-ai/embodied-intelligence",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "What is Physical AI?",
+    "permalink": "/physical-ai/what-is-physical-ai"
+  },
+  "next": {
+    "title": "Why Physical AI Matters",
+    "permalink": "/physical-ai/why-physical-ai-matters"
+  }
+}

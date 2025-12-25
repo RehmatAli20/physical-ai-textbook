@@ -1,0 +1,23 @@
+{
+  "id": "capstone/project-overview",
+  "title": "Capstone Project Overview",
+  "description": "The capstone project represents the final and most important component of this",
+  "source": "@site/docs/capstone/project-overview.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/project-overview",
+  "permalink": "/capstone/project-overview",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "cognitive-planning",
+    "permalink": "/vla/cognitive-planning"
+  },
+  "next": {
+    "title": "System Workflow",
+    "permalink": "/capstone/system-workflow"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "capstone/expected-outcomes",
+  "title": "Expected Learning Outcomes",
+  "description": "By completing the capstone project, students will achieve a comprehensive",
+  "source": "@site/docs/capstone/expected-outcomes.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/expected-outcomes",
+  "permalink": "/capstone/expected-outcomes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "System Workflow",
+    "permalink": "/capstone/system-workflow"
+  }
+}

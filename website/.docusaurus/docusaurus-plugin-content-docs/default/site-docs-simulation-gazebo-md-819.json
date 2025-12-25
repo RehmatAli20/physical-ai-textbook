@@ -1,0 +1,23 @@
+{
+  "id": "simulation/gazebo",
+  "title": "Gazebo Simulation Environment",
+  "description": "Gazebo is a physics-based simulation environment commonly used with ROS 2 to",
+  "source": "@site/docs/simulation/gazebo.md",
+  "sourceDirName": "simulation",
+  "slug": "/simulation/gazebo",
+  "permalink": "/simulation/gazebo",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Digital Twin Concept",
+    "permalink": "/simulation/digital-twin"
+  },
+  "next": {
+    "title": "Unity for Robotics Simulation",
+    "permalink": "/simulation/unity"
+  }
+}

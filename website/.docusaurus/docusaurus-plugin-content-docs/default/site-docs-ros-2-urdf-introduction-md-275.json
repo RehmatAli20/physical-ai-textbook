@@ -1,0 +1,23 @@
+{
+  "id": "ros2/urdf-introduction",
+  "title": "Introduction to URDF",
+  "description": "URDF (Unified Robot Description Format) is a file format used to describe the physical",
+  "source": "@site/docs/ros2/urdf-introduction.md",
+  "sourceDirName": "ros2",
+  "slug": "/ros2/urdf-introduction",
+  "permalink": "/ros2/urdf-introduction",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Nodes, Topics, and Services",
+    "permalink": "/ros2/nodes-topics-services"
+  },
+  "next": {
+    "title": "Digital Twin Concept",
+    "permalink": "/simulation/digital-twin"
+  }
+}

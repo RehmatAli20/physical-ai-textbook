@@ -1,0 +1,23 @@
+{
+  "id": "vla/voice-to-action",
+  "title": "Voice to Action",
+  "description": "Voice-to-action systems allow robots to receive spoken commands and convert them",
+  "source": "@site/docs/vla/voice-to-action.md",
+  "sourceDirName": "vla",
+  "slug": "/vla/voice-to-action",
+  "permalink": "/vla/voice-to-action",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Vision–Language–Action (VLA)",
+    "permalink": "/vla/vision-language-action"
+  },
+  "next": {
+    "title": "cognitive-planning",
+    "permalink": "/vla/cognitive-planning"
+  }
+}

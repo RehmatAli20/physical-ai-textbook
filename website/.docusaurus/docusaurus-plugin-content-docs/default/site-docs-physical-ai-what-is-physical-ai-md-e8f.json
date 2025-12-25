@@ -1,0 +1,23 @@
+{
+  "id": "physical-ai/what-is-physical-ai",
+  "title": "What is Physical AI?",
+  "description": "Physical AI refers to intelligent systems that interact with the physical world.# What is Physical AI?",
+  "source": "@site/docs/physical-ai/what-is-physical-ai.md",
+  "sourceDirName": "physical-ai",
+  "slug": "/physical-ai/what-is-physical-ai",
+  "permalink": "/physical-ai/what-is-physical-ai",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Learning Outcomes",
+    "permalink": "/intro/learning-outcomes"
+  },
+  "next": {
+    "title": "Embodied Intelligence",
+    "permalink": "/physical-ai/embodied-intelligence"
+  }
+}

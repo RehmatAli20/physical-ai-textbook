@@ -1,0 +1,23 @@
+{
+  "id": "nvidia-isaac/sim-to-real",
+  "title": "Sim-to-Real Transfer",
+  "description": "Sim-to-Real refers to the process of training AI models in simulation and then",
+  "source": "@site/docs/nvidia-isaac/sim-to-real.md",
+  "sourceDirName": "nvidia-isaac",
+  "slug": "/nvidia-isaac/sim-to-real",
+  "permalink": "/nvidia-isaac/sim-to-real",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Isaac ROS",
+    "permalink": "/nvidia-isaac/isaac-ros"
+  },
+  "next": {
+    "title": "Vision–Language–Action (VLA)",
+    "permalink": "/vla/vision-language-action"
+  }
+}

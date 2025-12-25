@@ -1,0 +1,23 @@
+{
+  "id": "ros2/ros2-overview",
+  "title": "ROS 2 Overview",
+  "description": "ROS 2 (Robot Operating System 2) is a middleware framework used to build and manage",
+  "source": "@site/docs/ros2/ros2-overview.md",
+  "sourceDirName": "ros2",
+  "slug": "/ros2/ros2-overview",
+  "permalink": "/ros2/ros2-overview",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Why Physical AI Matters",
+    "permalink": "/physical-ai/why-physical-ai-matters"
+  },
+  "next": {
+    "title": "Nodes, Topics, and Services",
+    "permalink": "/ros2/nodes-topics-services"
+  }
+}

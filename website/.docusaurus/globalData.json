@@ -1,0 +1,137 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "capstone/expected-outcomes",
+              "path": "/capstone/expected-outcomes",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "capstone/project-overview",
+              "path": "/capstone/project-overview",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "capstone/system-workflow",
+              "path": "/capstone/system-workflow",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "index",
+              "path": "/"
+            },
+            {
+              "id": "intro/learning-outcomes",
+              "path": "/intro/learning-outcomes",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "intro/overview",
+              "path": "/intro/overview",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "nvidia-isaac/isaac-ros",
+              "path": "/nvidia-isaac/isaac-ros",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "nvidia-isaac/isaac-sim",
+              "path": "/nvidia-isaac/isaac-sim",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "nvidia-isaac/sim-to-real",
+              "path": "/nvidia-isaac/sim-to-real",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "physical-ai/embodied-intelligence",
+              "path": "/physical-ai/embodied-intelligence",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "physical-ai/what-is-physical-ai",
+              "path": "/physical-ai/what-is-physical-ai",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "physical-ai/why-physical-ai-matters",
+              "path": "/physical-ai/why-physical-ai-matters",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "ros2/nodes-topics-services",
+              "path": "/ros2/nodes-topics-services",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "ros2/ros2-overview",
+              "path": "/ros2/ros2-overview",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "ros2/urdf-introduction",
+              "path": "/ros2/urdf-introduction",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "simulation/digital-twin",
+              "path": "/simulation/digital-twin",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "simulation/gazebo",
+              "path": "/simulation/gazebo",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "simulation/sensor-simulation",
+              "path": "/simulation/sensor-simulation",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "simulation/unity",
+              "path": "/simulation/unity",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "vla/cognitive-planning",
+              "path": "/vla/cognitive-planning",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "vla/vision-language-action",
+              "path": "/vla/vision-language-action",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "vla/voice-to-action",
+              "path": "/vla/voice-to-action",
+              "sidebar": "textbookSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "textbookSidebar": {
+              "link": {
+                "path": "/intro/overview",
+                "label": "intro/overview"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}
