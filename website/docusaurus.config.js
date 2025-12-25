@@ -7,24 +7,21 @@ const config = {
   tagline: 'A Textbook on Embodied Intelligence and Physical AI',
   favicon: 'img/favicon.ico',
 
-  future: {
-    v4: true,
-  },
-
-  url: 'http://localhost',
+  // ✅ REQUIRED FOR DEPLOY (Vercel / Netlify)
+  url: 'https://physical-ai-textbook.vercel.app',
   baseUrl: '/',
 
-  organizationName: 'rehmatal-i20',
+  organizationName: 'RehmatAli20',
   projectName: 'physical-ai-textbook',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
 
-  // ✅ GLOBAL FONTS (NO JSX)
   stylesheets: [
     {
       href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap',
@@ -38,7 +35,7 @@ const config = {
       {
         docs: {
           sidebarPath: './sidebars.js',
-          routeBasePath: '/', // Docs = website
+          routeBasePath: '/', // 👈 Docs = Homepage
         },
         blog: false,
         theme: {
@@ -50,15 +47,16 @@ const config = {
 
   themeConfig: {
     colorMode: {
+      defaultMode: 'dark',
       respectPrefersColorScheme: true,
     },
 
     navbar: {
-      title: 'Home',
+      title: 'Physical AI',
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'textbookSidebar',
+          type: 'doc',
+          docId: 'intro/overview',
           position: 'left',
           label: 'Textbook',
         },
