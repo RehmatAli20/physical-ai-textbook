@@ -1,17 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
+/**
+ * Pro-Level ChatWidget with Chat History
+ * Logic: Same as original, added 'messages' state for history.
+ */
 export default function ChatWidget() {
-  const { siteConfig } = useDocusaurusContext();
-  const BACKEND_URL = siteConfig.customFields.backendUrl;
-
   const [open, setOpen] = useState(false);
   const [question, setQuestion] = useState("");
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([]); // Array to hold { role: 'user'|'ai', text: string }
   const [loading, setLoading] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Default dark for pro feel
   const scrollRef = useRef(null);
 
+  const toggleTheme = () => setIsDarkMode(!isDarkMode);
+
+  // Auto-scroll to bottom whenever messages or loading changes
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -22,27 +25,45 @@ export default function ChatWidget() {
     if (!question.trim() || loading) return;
 
     const userQuestion = question;
-    setQuestion("");
+    setQuestion(""); // 1. Input field ko turant khali karna
+    
+    // 2. User ka message screen par show karna
     setMessages((prev) => [...prev, { role: "user", text: userQuestion }]);
     setLoading(true);
 
     try {
-      const res = await fetch(`${BACKEND_URL}/api/ask`, {
+
+      
+      const res = await fetch("https://ali2523-physical-ai-textbook-spec-kit.hf.space/api/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: userQuestion }),
       });
-
       const data = await res.json();
+      
+      // 3. AI ka answer screen par show karna
       setMessages((prev) => [...prev, { role: "ai", text: data.answer }]);
-    } catch {
-      setMessages((prev) => [
-        ...prev,
-        { role: "ai", text: "Network error. Please try again." },
-      ]);
+    } catch (error) {
+      setMessages((prev) => [...prev, { role: "ai", text: "Network error. Please try again." }]);
     } finally {
       setLoading(false);
     }
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      askQuestion();
+    }
+  };
+
+  const theme = {
+    bg: isDarkMode ? "#0f172a" : "#ffffff",
+    cardBg: isDarkMode ? "#1e293b" : "#f8fafc",
+    text: isDarkMode ? "#f1f5f9" : "#1e293b",
+    border: isDarkMode ? "#334155" : "#e2e8f0",
+    input: isDarkMode ? "#020617" : "#ffffff",
+    primary: "#6366f1",
   };
 
   return (
